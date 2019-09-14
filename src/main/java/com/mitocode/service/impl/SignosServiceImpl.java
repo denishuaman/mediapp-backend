@@ -19,10 +19,29 @@ public class SignosServiceImpl implements ISignosService {
 	public List<Signos> obtenerSignosVitales() {
 		return repo.obtenerSignosVitales();
 	}
-	
+
 	@Override
-	public Signos obtenerSignoVital(Integer id) {
+	public Signos registrar(Signos signos) {
+		return repo.save(signos);
+	}
+
+	@Override
+	public Signos modificar(Signos signos) {
+		return repo.save(signos);
+	}
+
+	@Override
+	public Signos leerPorId(Integer id) {
 		return repo.findOne(id);
 	}
 
+	@Override
+	public List<Signos> listar() {
+		return null;
+	}
+
+	@Override
+	public void eliminar(Integer id) {
+		repo.delete(id);
+	}
 }

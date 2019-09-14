@@ -11,6 +11,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
@@ -23,19 +24,24 @@ public class Signos {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer idSignos;
 
+	@NotNull
 	@JsonSerialize(using = ToStringSerializer.class)
 	@Column(name = "fecha", nullable = false)
 	private LocalDateTime fecha;
 
+	@NotNull
 	@Column(name = "temperatura", nullable = false)
 	private Double temperatura;
 
+	@NotNull
 	@Column(name = "pulso", nullable = false)
 	private Integer pulso;
 
+	@NotNull
 	@Column(name = "ritmo_respiratorio", nullable = false)
 	private Integer ritmoRespiratorio;
 
+	@NotNull
 	@ManyToOne
 	@JoinColumn(name = "id_paciente", nullable = false, foreignKey = @ForeignKey(name = "fk_signos_paciente"))
 	private Paciente paciente;
