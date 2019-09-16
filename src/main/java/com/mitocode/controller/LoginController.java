@@ -58,7 +58,7 @@ public class LoginController {
 				mail.setSubject("RESTABLECER CONTRASEÑA - MEDIAPP");
 				
 				Map<String, Object> model = new HashMap<>();
-				String url = "http://localhost:4200/recuperar/" + token.getToken();
+				String url = "http://localhost:4200/#/recuperar/" + token.getToken();
 				model.put("user", token.getUsuario().getUsername());
 				model.put("resetUrl", url);
 				mail.setModel(model);
