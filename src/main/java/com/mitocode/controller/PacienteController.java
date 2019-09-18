@@ -73,11 +73,12 @@ public class PacienteController {
 	}
 	
 	@PostMapping
-	public ResponseEntity<Object> registrar(@Valid @RequestBody Paciente pac) {
+	public ResponseEntity<Paciente> registrar(@Valid @RequestBody Paciente pac) {
 		Paciente paciente = service.registrar(pac);
 		// localhost:8080/pacientes/1
-		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(paciente.getIdPaciente()).toUri();
-		return ResponseEntity.created(location).build();
+//		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(paciente.getIdPaciente()).toUri();
+//		return ResponseEntity.created(location).build();
+		return new ResponseEntity<Paciente>(paciente, HttpStatus.CREATED);
 	}
 	
 	@PutMapping
