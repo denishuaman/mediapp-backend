@@ -105,16 +105,16 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 			
-<!-- 			<plugin> -->
-<!-- 				<artifactId>maven-war-plugin</artifactId> -->
-<!-- 				<configuration> -->
-<!-- 					<webResources> -->
-<!-- 						<resource> -->
-<!-- 							<directory>/src/mediapp-frontend</directory> -->
-<!-- 						</resource> -->
-<!-- 					</webResources> -->
-<!-- 				</configuration> -->
-<!-- 			</plugin>  -->
+			<plugin>
+				<artifactId>maven-war-plugin</artifactId>
+				<configuration>
+					<webResources>
+						<resource>
+							<directory>/src/mediapp-frontend</directory>
+						</resource>
+					</webResources>
+				</configuration>
+			</plugin> 
 		</plugins>
 	</build>
 
