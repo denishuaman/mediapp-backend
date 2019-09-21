@@ -1,0 +1,173 @@
+{
+	"info": {
+		"_postman_id": "9f543a38-fd9a-4560-965e-0fdd8ad65709",
+		"name": "Trabajo final - JAVA FULL STACK",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "signos vitales",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsibWl0b3Jlc291cmNlaWQiXSwidXNlcl9uYW1lIjoiZGVuaXMwNy4xOTkzQGdtYWlsLmNvbSIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE1NjkwNDI1OTksImF1dGhvcml0aWVzIjpbIkRCQSIsIkFETUlOIl0sImp0aSI6IjUwZTJhZTMxLTNiYmEtNDViOC04NTY2LWRmNzg5YzNhNDUwNiIsImNsaWVudF9pZCI6Im1pdG9tZWRpYXBwIn0.NIINIswc00Ayds_duBTtoDop3Uo98hGfSbOhzzi1xeE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/signos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"signos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "leer signos vitales por id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsibWl0b3Jlc291cmNlaWQiXSwidXNlcl9uYW1lIjoiZGVuaXMwNy4xOTkzQGdtYWlsLmNvbSIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE1NjkwNDI1OTksImF1dGhvcml0aWVzIjpbIkRCQSIsIkFETUlOIl0sImp0aSI6IjUwZTJhZTMxLTNiYmEtNDViOC04NTY2LWRmNzg5YzNhNDUwNiIsImNsaWVudF9pZCI6Im1pdG9tZWRpYXBwIn0.NIINIswc00Ayds_duBTtoDop3Uo98hGfSbOhzzi1xeE"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/signos/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"signos",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "registrar signos vitales",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsibWl0b3Jlc291cmNlaWQiXSwidXNlcl9uYW1lIjoiZGVuaXMwNy4xOTkzQGdtYWlsLmNvbSIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE1NjkwNDI1OTksImF1dGhvcml0aWVzIjpbIkRCQSIsIkFETUlOIl0sImp0aSI6IjUwZTJhZTMxLTNiYmEtNDViOC04NTY2LWRmNzg5YzNhNDUwNiIsImNsaWVudF9pZCI6Im1pdG9tZWRpYXBwIn0.NIINIswc00Ayds_duBTtoDop3Uo98hGfSbOhzzi1xeE"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"paciente\": {\n        \"idPaciente\": 6\n    },\n    \"fecha\": \"2019-09-20T13:16:00\",\n    \"temperatura\": 40.0,\n    \"pulso\": 80,\n    \"ritmoRespiratorio\": 12\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/signos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"signos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "modificar signos vitales",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsibWl0b3Jlc291cmNlaWQiXSwidXNlcl9uYW1lIjoiZGVuaXMwNy4xOTkzQGdtYWlsLmNvbSIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE1NjkwNDI1OTksImF1dGhvcml0aWVzIjpbIkRCQSIsIkFETUlOIl0sImp0aSI6IjUwZTJhZTMxLTNiYmEtNDViOC04NTY2LWRmNzg5YzNhNDUwNiIsImNsaWVudF9pZCI6Im1pdG9tZWRpYXBwIn0.NIINIswc00Ayds_duBTtoDop3Uo98hGfSbOhzzi1xeE"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"idSignos\": 8,\n    \"fecha\": \"2019-09-20T23:23:00.000\",\n    \"temperatura\": 38.5,\n    \"pulso\": 70,\n    \"ritmoRespiratorio\": 16,\n    \"paciente\": {\n        \"idPaciente\": 7\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/signos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"signos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminar signos vitales",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsibWl0b3Jlc291cmNlaWQiXSwidXNlcl9uYW1lIjoiZGVuaXMwNy4xOTkzQGdtYWlsLmNvbSIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE1NjkwNDI1OTksImF1dGhvcml0aWVzIjpbIkRCQSIsIkFETUlOIl0sImp0aSI6IjUwZTJhZTMxLTNiYmEtNDViOC04NTY2LWRmNzg5YzNhNDUwNiIsImNsaWVudF9pZCI6Im1pdG9tZWRpYXBwIn0.NIINIswc00Ayds_duBTtoDop3Uo98hGfSbOhzzi1xeE"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/signos/8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"signos",
+						"8"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
